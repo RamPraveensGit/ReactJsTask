@@ -8,23 +8,22 @@ import About from './Components/About';
 import Blog from './Components/Blog';
 import { BrowserRouter, Routes, Route, Link, Navigate} from 'react-router-dom';
 import ErrorPage from './Components/ErrorPage';
-
-
-
+import EmployeeList from './Components/EmployeeList';
 
 const App = ()=>{
   return(
     <div className='App'>
-        <UserProfile />
-      <BrowserRouter>
-        <ul>
-          <li> <Link to='/'>Homie Page</Link></li>
+      <div>
+      <BrowserRouter >
+        <ul className='Links'>
+          <li> <Link to='/'>Home Page</Link></li>
           <li> <Link to='/userlist'>userlist</Link></li>
           <li> <Link to='/about'>About</Link></li>
           <li> <Link to='/contact'>Contact</Link></li>
           <li> <Link to='/attendance'>Attendance</Link></li>
           <li> <Link to='/blog/1'>Blog 1</Link></li>
           <li> <Link to='/blog/2'>Blog 2</Link></li>
+          <li> <Link to='/employees'>Employee List</Link></li>
 
         </ul>
       <Routes>
@@ -36,11 +35,11 @@ const App = ()=>{
         <Route path='/blog/:id' element = {<Blog/>}></Route>
         <Route path='/error' element = {<ErrorPage/>}></Route>
         <Route path='*' element = {<Navigate to={'/error'} replace/>}></Route>
+        <Route path='/employees' element = {<EmployeeList/>}></Route>
 
       </Routes>
       </BrowserRouter>
-
-
+      </div>
     </div>
   );
 }

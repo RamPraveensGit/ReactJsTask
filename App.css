@@ -14,6 +14,13 @@
   .Absent{
     color:red;
   }
+  a {
+    text-decoration: none;
+    background-color: #dce2db;
+    border-radius: 50px;
+    padding: 10px;
+    }
+  
   
   .loading {
     color: #7add66;
@@ -135,3 +142,29 @@
   border-radius: 2%;
 border-radius: 10px;
 }
+
+.Links{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+ul {
+  list-style-type: none;
+}
+
+.emplist{
+  text-align: left;
+  padding: 25px;
+}
+
+.inemplist{
+  text-align: left;
+}
+
+.auth{
+  size: 100px;
+  border-radius: 50px;
+  margin-left: 50px;
+  padding: 10px;
+}
+

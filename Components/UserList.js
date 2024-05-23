@@ -1,5 +1,6 @@
 import '../App.css';
 import React, { useState, useEffect } from 'react';
+import withAuthentication from '../HOC/withAuthentication';
 
 const data = [
   { id: 1, name: 'Alice', email: 'alice@example.com' },
@@ -8,7 +9,7 @@ const data = [
   { id: 4, name: 'David', email: 'david@example.com' }
 ];
 
-export default function UserList() {
+ function UserList() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -43,3 +44,5 @@ export default function UserList() {
     </div>
   );
 }
+
+export default withAuthentication(UserList);
